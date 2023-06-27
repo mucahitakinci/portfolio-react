@@ -1,0 +1,97 @@
+$darkBg: darken($body-bg, 80%);
+body.dark {
+  background-color: $darkBg;
+  .custom-navbar {
+    .nav {
+      .item {
+        .link {
+          &:hover,
+          &.active {
+            color: $primary;
+          }
+        }
+      }
+    }
+    &.affix {
+      background: #393939;
+      .nav {
+        .item {
+          .link {
+            color: #fff;
+            &:hover,
+            &.active {
+              color: $primary;
+            }
+          }
+        }
+      }
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background: #fff;
+      }
+    }
+  }
+  .header {
+    .overlay {
+      /* background-image: linear-gradient(
+        to top,
+        darken($body-bg, 60%) 0%,
+        rgba(darken($primary, 60%), 0.35) 100%,
+        rgba(darken($primary, 60%), 0.5) 100%
+      ); */
+      background: $darkBg;
+    }
+    .header-title {
+      color: lighten(#444, 80%);
+      opacity: 1;
+      .up {
+        color: lighten(#444, 60%);
+      }
+    }
+  }
+  .section {
+    .section-subtitle {
+      opacity: 1;
+    }
+    .section-title {
+      color: lighten($newBlue, 20%);
+      font-weight: 500;
+    }
+  }
+  p {
+    color: lighten(#111, 100%);
+  }
+  .title {
+    color: #fff;
+  }
+  .form-control::placeholder {
+    color: rgba($color: #fff, $alpha: 0.6);
+  }
+  .form-control:-ms-input-placeholder {
+    color: rgba($color: #fff, $alpha: 0.6);
+  }
+  .form-control::-ms-input-placeholder {
+    color: rgba($color: #fff, $alpha: 0.6);
+  }
+  .form-control::-webkit-input-placeholder {
+    color: rgba($color: #fff, $alpha: 0.6);
+  }
+  .form-control {
+    color: #fff;
+  }
+  input:focus,
+  textarea:focus {
+    box-shadow: none !important;
+    outline: none;
+    border-color: $border-color;
+  }
+  .footer {
+    .social-links {
+      a {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+  }
+}
